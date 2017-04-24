@@ -1,0 +1,41 @@
+body {
+  background-color: white;
+}
+
+.nav-item {
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Comfortaa", cursive;
+  color: black;
+  font-size: 24px;
+  color: #d30000;
+  padding: 15px 25px 15px 25px;
+}
+
+.nav-item:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width .4s ease, background-color .4s ease;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  background: #d30000;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+#logo {
+  text-decoration: none;
+  font-size: 48px;
+}
