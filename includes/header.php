@@ -23,21 +23,21 @@
 
 <body>
   <nav>
-    <a href="#" class="nav-item">
+    <a href="./index.php" class="nav-item">
       home
     </a>
-    <a href="#" class="nav-item">
+    <a href="./menu.php" class="nav-item">
       menu
     </a>
-    <a href="#" class="nav-item">
+    <a href="./index.php" class="nav-item">
       <div id="logo">
-        cafe <i class="fa fa-circle" aria-hidden="true"></i> pacific
+        café <i class="fa fa-circle" aria-hidden="true"></i> pacific
       </div>
     </a>
-    <a href="#" class="nav-item">
+    <a href="./about.php" class="nav-item">
       about
     </a>
-    <a href="#" class="nav-item">
+    <a href="./contact.php" class="nav-item">
       contact
     </a>
   </nav>
