@@ -18,6 +18,11 @@ nav:hover {
   padding: 15px 25px 15px 25px;
 }
 
+.nav-item:hover {
+  text-decoration: none;
+  color: #d30000;
+}
+
 .nav-item:after {
   content: '';
   display: block;
