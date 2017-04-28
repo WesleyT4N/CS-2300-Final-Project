@@ -21,22 +21,22 @@
 </head>
 
 <body>
-  <nav>
-    <a href="./index" class="nav-item">
-      home
-    </a>
-    <a href="./menu" class="nav-item">
-      menu
-    </a>
-    <a href="./index" class="nav-item">
-      <div id="logo">
-        café <i class="fa fa-circle" aria-hidden="true"></i> pacific
-      </div>
-    </a>
-    <a href="./about" class="nav-item">
-      about
-    </a>
-    <a href="./contact" class="nav-item">
-      contact
-    </a>
+  <nav class="navbar">
+      <a href="./index" class="nav-item">
+        home
+      </a>
+      <a href="./menu" class="nav-item">
+        menu
+      </a>
+      <a href="./index" class="nav-item">
+        <div id="logo">
+          café <i class="fa fa-circle" aria-hidden="true"></i> pacific
+        </div>
+      </a>
+      <a href="./about" class="nav-item">
+        about
+      </a>
+      <a href="./contact" class="nav-item">
+        contact
+      </a>
   </nav>
