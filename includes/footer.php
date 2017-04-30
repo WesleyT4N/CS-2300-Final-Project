@@ -8,7 +8,6 @@
             <br />
             <i class="fa fa-map-marker" aria-hidden="true"></i> 114 Dryden Rd, Ithaca, NY 14850
           </p>
-          <br />
           <div id="contactButtonWrapper">
             <btn class="btn contact-button">leave a comment</btn>
           </div>
