@@ -9,7 +9,9 @@
             <i class="fa fa-map-marker" aria-hidden="true"></i> 114 Dryden Rd, Ithaca, NY 14850
           </p>
           <div id="contactButtonWrapper">
-            <btn class="btn contact-button">leave a comment</btn>
+            <!-- <form action="./contact" method="post"> -->
+              <a id="footerCommentBtn" href="./contact" class="btn contact-button">leave a comment</a>
+            <!-- </form> -->
           </div>
 
         </div>
@@ -20,7 +22,7 @@
             <a class="sitemap-link" href="./menu">menu</a>
             <a class="sitemap-link" href="./about">about</a>
             <a class="sitemap-link" href="./contact">contact</a>
-            <a class="sitemap-link" href="#">admin login</a>
+            <a class="sitemap-link" href="./login">admin login</a>
           </p>
         </div>
       </div>

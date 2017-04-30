@@ -41,7 +41,7 @@ body {
   transition: width .5s ease, background-color .5s ease;
 }
 
-.nav-item:hover:after {
+.nav-item:hover:after, .nav-item:active:after, .nav-item:focus:after {
   width: 100%;
   background: #d30000;
 }
@@ -222,6 +222,17 @@ footer {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
 }
 
+#loginForm {
+  font-size: 18px;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 16px;
+  padding-bottom: 1px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
 #commentHeader {
   text-align: center;
   margin: 0 0 8px;
@@ -258,10 +269,19 @@ input:focus, textarea:focus, input:active, textarea:active {
   margin-bottom: 16px;
 }
 
-#submitContainer {
+.submit-container {
   text-align: right;
 }
 
-#commentSubmit {
+#commentSubmit, #loginSubmit {
   width: 150px;
+}
+
+#footerCommentBtn:hover, #footerCommentBtn:active, #footerCommentBtn:focus {
+  text-decoration: none;
+  color: white;
+}
+
+.login-container {
+  margin-bottom: 16px;
 }

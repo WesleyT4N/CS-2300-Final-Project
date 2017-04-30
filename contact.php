@@ -15,6 +15,7 @@
         <br />
         <i class="fa fa-phone" aria-hidden="true"></i> (607)-277-7700
       </p>
+      <hr />
       <form id="contactForm" method="post">
         <h2 id="commentHeader">leave a comment</h2>
         <div class="form-group">
@@ -25,7 +26,7 @@
           <label>comment</label>
           <textarea id="comment" autocomplete="off" type="textarea" name="comment" placeholder="(comments, suggestions, etc.)" rows="4"></textarea>
         </div>
-        <div class="form-group" id="submitContainer">
+        <div class="form-group submit-container">
           <button class="btn" type="button" id="commentSubmit" name="submit">send</button>
         </div>
       </form>
