@@ -15,28 +15,28 @@
   <link href="./css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://use.fontawesome.com/104d9a8f78.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <?php require_once "./includes/functions.php"; ?>
 </head>
 
 <body>
-  <nav class="navbar">
-      <a href="./index" class="nav-item">
-        home
-      </a>
-      <a href="./menu" class="nav-item">
-        menu
-      </a>
-      <a href="./index" class="nav-item">
-        <div id="logo">
-          café <i class="fa fa-circle" aria-hidden="true"></i> pacific
-        </div>
-      </a>
-      <a href="./about" class="nav-item">
-        about
-      </a>
-      <a href="./contact" class="nav-item">
-        contact
-      </a>
-  </nav>
+      <nav class="navbar">
+          <a href="./index" class="nav-item">
+            home
+          </a>
+          <a href="./menu" class="nav-item">
+            menu
+          </a>
+          <a href="./index" class="nav-item">
+            <div id="logo">
+              café <i class="fa fa-circle" aria-hidden="true"></i> pacific
+            </div>
+          </a>
+          <a href="./about" class="nav-item">
+            about
+          </a>
+          <a href="./contact" class="nav-item">
+            contact
+          </a>
+        </nav>
+    <div class="wrapper">
