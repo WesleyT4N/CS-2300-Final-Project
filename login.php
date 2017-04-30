@@ -23,6 +23,9 @@
           <button class="btn" type="submit" id="loginSubmit">login</button>
         </div>
       </form>
+      <?php
+      // Put login code here
+      ?>
     </div>
   </div>
 </div>

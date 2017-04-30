@@ -30,6 +30,9 @@
           <button class="btn" type="button" id="commentSubmit" name="submit">send</button>
         </div>
       </form>
+      <?php
+      // Put contact code here
+      ?>
     </div>
   </div>
 </div>
