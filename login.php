@@ -40,13 +40,13 @@
         if( password_verify( $post_password, $db_hash_password ) ) {
             $db_username = $row['Username'];
             $_SESSION['logged_user'] = $db_username;
-            echo '<p>You have successfully logged in.</p>';
+            echo '<p class="success-message">You have successfully logged in as '.$db_username.'.</p>';
         }
         else if ($post_username != NULL && $post_password != NULL) {
-            echo '<p>Your username and/or password were not correct.</p>';
-            echo '<p>Please <a href="login.php">try</a> again.</p>';
+            echo '<p class="error-message">Your username and/or password were not correct.</p>';
+            echo '<p>Please <a href="login.php">try again</a>.</p>';
         }
-                  
+
         $mysqli->close();
       ?>
     </div>

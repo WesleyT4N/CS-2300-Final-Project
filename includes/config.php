@@ -10,7 +10,7 @@ define('DB_USER', 'fp_supercool');
 
 // Your course server password
 //define('DB_PASSWORD', 'wesleyt0');
-define('DB_PASSWORD', 'uWq_6y_8R7Zqy!NR');
+define('DB_PASSWORD', 'supercool123');
 
 // The name of the database to which you want to connect
 // info230_SP16_username - info230_SP16_sm68sp16
