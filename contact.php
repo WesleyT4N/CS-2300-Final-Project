@@ -6,7 +6,7 @@
         <h1 class="page-header-title ">contact</h1>
       </div>
       <div class="col-xs-6 translate-container">
-        <button class="btn translate-button" type="button">eng / jpn</button>
+        <button class="btn translate-button" id="contactTranslateBtn" type="button">eng / jpn</button>
       </div>
     </div>
     <div class="contact-content">
@@ -31,7 +31,12 @@
         </div>
       </form>
       <?php
-      // Put contact code here
+      // PSEUDOCODE:
+      // If the button is pressed:
+
+        // Sanitize name and comment inputs. If any of the fields are empty raise an error
+
+        // Use mail() function to send to designated email ex: mail("placeholder@gmail.com", "subject", comment, headers)
       ?>
     </div>
   </div>
