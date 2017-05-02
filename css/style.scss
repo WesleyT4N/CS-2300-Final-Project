@@ -165,17 +165,18 @@ footer {
   font-family: 'Open Sans', sans-serif;
   text-align: left;
 }
-.sitemap-link {
+.footer-link {
   color: white;
   font-size: 16px;
   display: block;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
+  transition: .3s ease;
 }
 
-.sitemap-link:hover, .sitemap-link:active, .sitemap-link:focus {
+.footer-link:hover, .footer-link:focus {
   text-decoration: none;
-  color: white;
+  color: #a6a6a6;
 }
 
 .welcome-text {
@@ -218,14 +219,8 @@ footer {
 
 #loginForm {
   font-size: 18px;
-  margin-left: 20%;
-  margin-right: 20%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 16px;
-  padding-bottom: 1px;
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
 }
+
 #commentHeader {
   text-align: center;
   margin: 0 0 8px;
@@ -263,6 +258,7 @@ input:focus, textarea:focus, input:active, textarea:active {
 
 .submit-container {
   text-align: right;
+  margin-bottom: 0;
 }
 
 #commentSubmit, #loginSubmit {
@@ -276,4 +272,44 @@ input:focus, textarea:focus, input:active, textarea:active {
 
 .login-container {
   margin-bottom: 16px;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
+}
+
+.success-message {
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  text-align: center;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.error-message {
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  text-align: center;
+  background-color: #a60404;
+  color: white;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#logoutForm {
+  text-align: right;
+  margin-bottom: 12px;
 }
