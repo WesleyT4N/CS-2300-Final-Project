@@ -14,10 +14,12 @@
     </div>
     <div class="row">
       <p class="welcome-text">
-        Café Pacific brings together East and West in the heart of Collegetown, Ithaca, NY.
-        From sushi to smoothies and bubble tea, sit down for a full authetntic
-        Japanese dinner made by Chef Hidemitsu Hoshino, or stop by for a quick coffee or drink.
-        And make sure to check out our amazing cake and dessert selection!
+        Come to Café Pacific, located in the heart of collegetown, for a cozy 
+        home-cooked Japanese meal and hearty dessert, or simply stop by for 
+        some bubble tea and choose from a variety of Japanese snacks.
+        <!--Japanese:
+          カレッジタウンのカフェパシフィックで、美味しい家庭料理が食べられます。色々なデザートやお菓子もありますから、ぜひ来てください！
+        -->
       </p>
     </div>
   </div>
