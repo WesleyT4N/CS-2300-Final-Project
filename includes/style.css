@@ -1,0 +1,335 @@
+body, html {
+  background-color: white;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-fmaily: 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+.nav-item {
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Comfortaa", cursive;
+  color: black;
+  font-size: 20px;
+  color: #d30000;
+  padding: 15px 25px 15px 25px;
+}
+
+.nav-item:hover, .nav-item:active, .nav-item:focus {
+  text-decoration: none;
+  color: #d30000;
+}
+
+.nav-item:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.nav-item:hover:after, .nav-item:active:after, .nav-item:focus:after {
+  width: 100%;
+  background: #d30000;
+}
+
+nav {
+  width: 100%;
+  z-index: 2;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: .3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
+}
+
+nav:hover {
+  background-color: white;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+#logo {
+  text-decoration: none;
+  font-size: 36px;
+}
+
+.main-container {
+  margin-top: 5px;
+  background-color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.banner-image {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 0;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 0;
+  background-image: url(../img/test.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-header-title {
+  display: inline-block;
+  color: #d30000;
+  font-size: 36px;
+  font-family: "Comfortaa", cursive;
+  border-bottom: 2px solid #d30000;
+}
+
+#welcomeContainer {
+  width: 100%;
+  margin-left: 0;
+  margin-top: -24px;
+  padding-top: 24px;
+}
+
+.content-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  vertical-align: center;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #d30000;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  transition: .3s ease;
+  opacity: 1;
+  outline: none;
+  font-size: 18px;
+  color: white;
+  font-family: "Comfortaa", cursive;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
+}
+
+.btn:hover {
+  transition: .3s ease;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.btm:focus, .btn:active {
+  outline: none;
+  box-shadow: unset;
+}
+
+.translate-button {
+  margin-top: 28px;
+}
+
+.contact-button {
+  background-color: #a60404;
+  font-size: 16px;
+}
+
+#contactButtonWrapper {
+  margin-top: 24px;
+  text-align: left;
+}
+
+.translate-container, .header-container {
+  text-align: center;
+}
+
+footer {
+  padding-left: 34%;
+  padding-right: 10%;
+  background-color: #d30000;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-section-title {
+  font-family: "Comfortaa", cursive;
+  text-align: left;
+}
+
+.contact-info, .sitemap {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+}
+
+.footer-link {
+  color: white;
+  font-size: 16px;
+  display: block;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  transition: .3s ease;
+}
+
+.footer-link:hover, .footer-link:focus {
+  text-decoration: none;
+  color: #a6a6a6;
+}
+
+.welcome-text {
+  padding-left: 17%;
+  padding-right: 17%;
+  font-size: 18px;
+  margin-top: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.menu-header {
+  font-family: 'Comfortaa', sans-serif;
+  text-align: center;
+}
+
+.menu-container {
+  margin-bottom: 16px;
+}
+
+.menu-row {
+  margin-bottom: 16px;
+}
+
+.item-type-container {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
+.contact-container {
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 16px;
+}
+
+.contact-content {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#phoneNumber {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 0;
+}
+
+#contactForm {
+  font-size: 18px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
+#loginForm {
+  font-size: 18px;
+}
+
+#commentHeader {
+  text-align: center;
+  margin: 0 0 8px;
+  font-family: "Comfortaa", cursive;
+}
+
+label {
+  font-size: 20px;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  resize: none;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: .3s ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
+}
+
+input:hover, textarea:hover {
+  transition: .3s ease;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+input:focus, textarea:focus, input:active, textarea:active {
+  outline: none;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.submit-container {
+  text-align: right;
+  margin-bottom: 0;
+}
+
+#commentSubmit, #loginSubmit {
+  width: 150px;
+}
+
+#footerCommentBtn:hover, #footerCommentBtn:active, #footerCommentBtn:focus {
+  text-decoration: none;
+  color: white;
+}
+
+.login-container {
+  margin-bottom: 16px;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
+.success-message {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  text-align: center;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.error-message {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  text-align: center;
+  background-color: #a60404;
+  color: white;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#logoutForm {
+  text-align: right;
+  margin-bottom: 12px;
+}
