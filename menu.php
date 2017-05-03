@@ -9,7 +9,17 @@
         <button class="btn translate-button" id="menuTranslateBtn" type="button">eng / jpn</button>
       </div>
     </div>
-  </div>
+</div>
+    <?php
+    require_once "includes/config.php";
+    $mysqli = new mysqli( DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    
+    if ($mysqli->connect_errno) {
+        echo "Failed";
+        echo "Errno: " . $mysqli->connect_errno . "\n";
+        echo "Error: " . $mysqli->connect_error . "\n";
+    }
+    ?>
   <div class="menu-container">
     <div class="row menu-row">
       <div class="col-sm-6">
@@ -18,11 +28,22 @@
           <hr />
           <div class="item-container" id="entrees">
             <?php
-              // Make SQL query
-
-              // Form associative array with japanese item name, and price
-
-              // echo items with type entrees
+              $entrees = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 8");
+              while($row = $entrees->fetch_assoc()) {
+                  $pic = $row[ 'filePath' ];
+                  $credit = $row[ 'credit' ];
+                  $en = $row[ 'en' ];
+                  $jp = $row[ 'jp' ];
+                  $price = $row[ 'price' ];
+                  
+                  echo "<p>$en</p>";
+                  echo "<p>$price</p>";
+                  
+                  // if you want to use these later on
+                  //echo "<p>$pic</p>";
+                  //echo "<p>$credit</p>";
+                  //echo "<p>$jp</p>";
+              }
             ?>
           </div>
         </div>
@@ -33,11 +54,22 @@
           <hr />
           <div class="item-container" id="noodles">
             <?php
-              // Make SQL query
-
-              // Form associative array with japanese item name, and price
-
-              // echo items with type noodles
+              $noodles = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 3");
+              while($row = $noodles->fetch_assoc()) {
+                  $pic = $row[ 'filePath' ];
+                  $credit = $row[ 'credit' ];
+                  $en = $row[ 'en' ];
+                  $jp = $row[ 'jp' ];
+                  $price = $row[ 'price' ];
+                  
+                  echo "<p>$en</p>";
+                  echo "<p>$price</p>";
+                  
+                  // if you want to use these later on
+                  //echo "<p>$pic</p>";
+                  //echo "<p>$credit</p>";
+                  //echo "<p>$jp</p>";
+              }
             ?>
           </div>
         </div>
@@ -50,11 +82,22 @@
           <hr />
           <div class="item-container" id="salads">
             <?php
-              // Make SQL query
-
-              // Form associative array with japanese item name, and price
-
-              // echo items with type salads
+              $salads = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 2");
+              while($row = $salads->fetch_assoc()) {
+                  $pic = $row[ 'filePath' ];
+                  $credit = $row[ 'credit' ];
+                  $en = $row[ 'en' ];
+                  $jp = $row[ 'jp' ];
+                  $price = $row[ 'price' ];
+                  
+                  echo "<p>$en</p>";
+                  echo "<p>$price</p>";
+                  
+                  // if you want to use these later on
+                  //echo "<p>$pic</p>";
+                  //echo "<p>$credit</p>";
+                  //echo "<p>$jp</p>";
+              }
             ?>
           </div>
         </div>
@@ -65,11 +108,22 @@
           <hr />
           <div class="item-container" id="riceDishes">
             <?php
-            // Make SQL query
-
-            // Form associative array with japanese item name, and price
-
-            // echo items with type rice dish
+            $rice = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 7");
+              while($row = $rice->fetch_assoc()) {
+                  $pic = $row[ 'filePath' ];
+                  $credit = $row[ 'credit' ];
+                  $en = $row[ 'en' ];
+                  $jp = $row[ 'jp' ];
+                  $price = $row[ 'price' ];
+                  
+                  echo "<p>$en</p>";
+                  echo "<p>$price</p>";
+                  
+                  // if you want to use these later on
+                  //echo "<p>$pic</p>";
+                  //echo "<p>$credit</p>";
+                  //echo "<p>$jp</p>";
+              }
             ?>
           </div>
         </div>
@@ -82,11 +136,22 @@
           <hr />
           <div class="item-container" id="sides">
             <?php
-              // Make SQL query
-
-              // Form associative array with japanese item name, and price
-
-              // echo items with type sides
+              $sides = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 4");
+              while($row = $sides->fetch_assoc()) {
+                  $pic = $row[ 'filePath' ];
+                  $credit = $row[ 'credit' ];
+                  $en = $row[ 'en' ];
+                  $jp = $row[ 'jp' ];
+                  $price = $row[ 'price' ];
+                  
+                  echo "<p>$en</p>";
+                  echo "<p>$price</p>";
+                  
+                  // if you want to use these later on
+                  //echo "<p>$pic</p>";
+                  //echo "<p>$credit</p>";
+                  //echo "<p>$jp</p>";
+              }
             ?>
           </div>
         </div>
@@ -97,11 +162,22 @@
           <hr />
           <div class="item-container" id="deserts">
             <?php
-              // Make SQL query
-
-              // Form associative array with japanese item name, and price
-
-              // echo items with type deserts
+              $desserts = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 5");
+              while($row = $desserts->fetch_assoc()) {
+                  $pic = $row[ 'filePath' ];
+                  $credit = $row[ 'credit' ];
+                  $en = $row[ 'en' ];
+                  $jp = $row[ 'jp' ];
+                  $price = $row[ 'price' ];
+                  
+                  echo "<p>$en</p>";
+                  echo "<p>$price</p>";
+                  
+                  // if you want to use these later on
+                  //echo "<p>$pic</p>";
+                  //echo "<p>$credit</p>";
+                  //echo "<p>$jp</p>";
+              }
             ?>
           </div>
         </div>
@@ -114,11 +190,22 @@
           <hr />
           <div class="item-container" id="drinks">
             <?php
-              // Make SQL query
-
-              // Form associative array with japanese item name, and price
-
-              // echo items with type drinks
+              $drinks = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 1");
+              while($row = $drinks->fetch_assoc()) {
+                  $pic = $row[ 'filePath' ];
+                  $credit = $row[ 'credit' ];
+                  $en = $row[ 'en' ];
+                  $jp = $row[ 'jp' ];
+                  $price = $row[ 'price' ];
+                  
+                  echo "<p>$en</p>";
+                  echo "<p>$price</p>";
+                  
+                  // if you want to use these later on
+                  //echo "<p>$pic</p>";
+                  //echo "<p>$credit</p>";
+                  echo "<p>Japanese name: $jp</p>";
+              }
             ?>
           </div>
         </div>
@@ -129,11 +216,22 @@
           <hr />
           <div class="item-container" id="snacks">
             <?php
-              // Make SQL query
-
-              // Form associative array with japanese item name, and price
-
-              // echo items with type snacks
+              $snacks = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 6");
+              while($row = $snacks->fetch_assoc()) {
+                  $pic = $row[ 'filePath' ];
+                  $credit = $row[ 'credit' ];
+                  $en = $row[ 'en' ];
+                  $jp = $row[ 'jp' ];
+                  $price = $row[ 'price' ];
+                  
+                  echo "<p>$en</p>";
+                  echo "<p>$price</p>";
+                  
+                  // if you want to use these later on
+                  //echo "<p>$pic</p>";
+                  //echo "<p>$credit</p>";
+                  //echo "<p>$jp</p>";
+              }
             ?>
           </div>
         </div>
