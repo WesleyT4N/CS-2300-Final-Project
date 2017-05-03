@@ -25,7 +25,6 @@
       <div class="col-md-6">
         <div class="item-type-container">
           <h1 class="menu-header">entrees</h1>
-          <hr />
           <div class="item-container" id="entrees">
             <?php
             $entrees = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 8");
@@ -48,7 +47,6 @@
         </div>
         <div class="item-type-container">
           <h1 class="menu-header">noodles</h1>
-          <hr />
           <div class="item-container" id="noodles">
             <?php
             $noodles = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 3");
@@ -71,7 +69,6 @@
         </div>
         <div class="item-type-container">
           <h1 class="menu-header">sides</h1>
-          <hr />
           <div class="item-container" id="sides">
             <?php
             $sides = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 4");
@@ -94,7 +91,6 @@
         </div>
         <div class="item-type-container">
           <h1 class="menu-header">salads</h1>
-          <hr />
           <div class="item-container" id="salads">
             <?php
             $salads = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 2");
@@ -118,7 +114,6 @@
 
         <div class="item-type-container">
           <h1 class="menu-header">snacks</h1>
-          <hr />
           <div class="item-container" id="snacks">
             <?php
             $snacks = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 6");
@@ -144,7 +139,6 @@
       <div class="col-md-6">
         <div class="item-type-container">
           <h1 class="menu-header">rice dishes</h1>
-          <hr />
           <div class="item-container" id="riceDishes">
             <?php
             $rice = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 7");
@@ -168,7 +162,6 @@
 
         <div class="item-type-container">
           <h1 class="menu-header">drinks</h1>
-          <hr />
           <div class="item-container" id="drinks">
             <?php
             $drinks = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 1");
@@ -191,9 +184,8 @@
         </div>
 
         <div class="item-type-container">
-          <h1 class="menu-header">deserts</h1>
-          <hr />
-          <div class="item-container" id="deserts">
+          <h1 class="menu-header">desserts</h1>
+          <div class="item-container" id="desserts">
             <?php
             $desserts = $mysqli->query("SELECT * FROM Items LEFT JOIN TypeOfItems ON Items.itemID = TypeOfItems.itemID WHERE TypeOfItems.typeID = 5");
             while($row = $desserts->fetch_assoc()) {
