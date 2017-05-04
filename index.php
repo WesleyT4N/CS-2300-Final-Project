@@ -5,11 +5,13 @@
 <div class="main-container" id="welcomeContainer">
   <div class="content-container">
     <div class="row">
-      <div class="col-xs-6 header-container">
+      <div class="col-sm-6 header-container">
         <h1 class="page-header-title">welcome</h1>
       </div>
-      <div class="col-xs-6 translate-container">
-        <button class="btn translate-button" id="welcomeTranslateBtn" type="button">eng/jpn</button>
+      <div class="col-sm-6 translate-container">
+        <button class="btn translate-button" id="welcomeTranslateBtn" type="button">
+          ENG <i class="fa fa-arrows-h" aria-hidden="true"></i> 日本語
+        </button>
       </div>
     </div>
     <div class="row">

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <title>Café Pacific | Ithaca NY</title>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
   <link rel="stylesheet" type="text/css" href="./css/style.css"/>
 
@@ -34,7 +34,7 @@
             </div>
           </a>
           <a href="./about" class="nav-item">
-            about
+            info
           </a>
           <a href="./contact" class="nav-item">
             contact

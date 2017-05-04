@@ -2,11 +2,13 @@
 <div class="main-container">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-6 header-container">
+      <div class="col-sm-6 header-container">
         <h1 class="page-header-title ">admin login</h1>
       </div>
-      <div class="col-xs-6 translate-container">
-        <button class="btn translate-button" id="loginTranslateBtn" type="button">eng / jpn</button>
+      <div class="col-sm-6 translate-container">
+        <button class="btn translate-button" id="loginTranslateBtn" type="button">
+          ENG <i class="fa fa-arrows-h" aria-hidden="true"></i> 日本語
+         </button>
       </div>
     </div>
     <div class="login-container">

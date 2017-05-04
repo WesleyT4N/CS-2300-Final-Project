@@ -112,7 +112,7 @@ nav:hover {
   cursor: pointer;
   background-color: #d30000;
   border: none;
-  padding: 10px 20px 10px 20px;
+  padding: 11px 20px 10px 20px;
   transition: .3s ease;
   opacity: 1;
   outline: none;
@@ -134,6 +134,11 @@ nav:hover {
 
 .translate-button {
   margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.translate-container {
+  height: 99px;
 }
 
 .contact-button {
@@ -236,7 +241,7 @@ footer {
   padding-right: 5%;
   padding-top: 16px;
   padding-bottom: 16px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 #loginForm {
@@ -246,6 +251,12 @@ footer {
 #commentHeader {
   text-align: center;
   margin: 0 0 8px;
+  font-family: "Comfortaa", cursive;
+}
+
+#locationHeader, #hoursHeader, #transitHeader {
+  text-align: center;
+  margin: 0;
   font-family: "Comfortaa", cursive;
 }
 
@@ -301,7 +312,7 @@ input:focus, textarea:focus, input:active, textarea:active {
   padding-right: 5%;
   padding-top: 16px;
   padding-bottom: 16px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .success-message {
@@ -342,4 +353,75 @@ input:focus, textarea:focus, input:active, textarea:active {
   font-size: 1.25em;
   margin-left: 3%;
   margin-right: 3%;
+}
+
+.about-container {
+  margin-bottom: 16px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.location-container {
+  padding-top: 16px;
+  padding-bottom: 12px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.hours-container, .transit-container {
+  padding-top: 16px;
+  padding-bottom: 8px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+#locationLink {
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  color: black;
+  text-align: center;
+  display: block;
+  transition: .3s ease;
+}
+
+#locationLink:hover {
+  text-decoration: none;
+  text-decoration: none;
+  color: #a6a6a6;
+}
+
+#map {
+  padding: 5px;
+  border: 0;
+  width: 100%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.date {
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.hours-container, .transit-container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.time {
+  float: right;
+}
+
+.bus-route {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
 }
