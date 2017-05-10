@@ -1,6 +1,9 @@
 <?php include('./includes/header.php'); ?>
 <div class="banner-image">
-
+  <ul class="bxslider">
+    <li class="slider-image"><img src="/img/interior.jpg" /></li>
+    <li class="slider-image"><img src="/img/katsudon.jpg" /></li>
+  </ul>
 </div>
 <div class="main-container" id="welcomeContainer">
   <div class="content-container">

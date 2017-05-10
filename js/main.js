@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  $('.bxslider').bxSlider({
+    auto: true,
+    autoControls: false
+  });
+
   $('#welcomeTranslateBtn').click(function() {
     // Replace page-header-title with japanese text
 
