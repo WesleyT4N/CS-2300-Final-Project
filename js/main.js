@@ -2,7 +2,12 @@ $(document).ready(function() {
 
   $('.bxslider').bxSlider({
     auto: true,
-    autoControls: false
+    autoControls: false,
+    mode: 'fade',
+    randomStart: true,
+    responsive: true,
+    pager: false,
+    controls: false
   });
 
   $('#welcomeTranslateBtn').click(function() {

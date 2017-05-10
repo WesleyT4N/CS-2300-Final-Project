@@ -6,16 +6,14 @@
   position: relative;
   margin-bottom: 60px;
   padding: 0;
-  *zoom: 1;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
   height: 400px;
+  width: 100%;
 }
 .bx-wrapper img {
   width: 100%;
   display: block;
   position: relative;
-  bottom: 100px;
+  bottom: 265px;
 }
 
 .bxslider {

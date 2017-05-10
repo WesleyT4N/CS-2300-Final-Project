@@ -1,8 +1,12 @@
 <?php include('./includes/header.php'); ?>
 <div class="banner-image">
   <ul class="bxslider">
-    <li class="slider-image"><img src="/img/interior.jpg" /></li>
-    <li class="slider-image"><img src="/img/katsudon.jpg" /></li>
+    <li class="banner-slider-image"><img src="/img/katsudon.jpg" /></li>
+    <li class="banner-slider-image"><img src="/img/yakisoba.jpg" /></li>
+    <li class="banner-slider-image"><img src="/img/tempuraudon.jpg" /></li>
+    <li class="banner-slider-image"><img src="/img/mochiicecream.jpg" /></li>
+    <li class="banner-slider-image"><img src="/img/kakifry.jpg" /></li>
+    <li class="banner-slider-image"><img src="/img/gyoza.jpg" /></li>
   </ul>
 </div>
 <div class="main-container" id="welcomeContainer">
