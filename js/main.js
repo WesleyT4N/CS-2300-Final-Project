@@ -5,7 +5,6 @@ $(document).ready(function() {
     autoControls: false,
     mode: 'fade',
     randomStart: true,
-    responsive: true,
     pager: false,
     controls: false
   });

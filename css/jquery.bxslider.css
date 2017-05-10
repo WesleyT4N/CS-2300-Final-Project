@@ -10,10 +10,28 @@
   width: 100%;
 }
 .bx-wrapper img {
-  width: 100%;
+  width: 150%;
   display: block;
   position: relative;
-  bottom: 265px;
+  bottom: 0px;
+}
+
+@media screen and (min-width: 960px) {
+  .bx-wrapper img {
+    width: 100%;
+    display: block;
+    position: relative;
+    bottom: 275px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .bx-wrapper img {
+    width: 200%;
+    display: block;
+    position: relative;
+    right: 250px;
+  }
 }
 
 .bxslider {
