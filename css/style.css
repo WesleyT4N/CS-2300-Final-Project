@@ -113,7 +113,7 @@ nav:hover {
   cursor: pointer;
   background-color: #d30000;
   border: none;
-  padding: 15px 20px 10px 20px;
+  padding: 10px 20px 10px 20px;
   transition: .3s ease;
   opacity: 1;
   outline: none;
@@ -425,4 +425,76 @@ input:focus, textarea:focus, input:active, textarea:active {
 .bus-route {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5em;
+}
+
+.edit-button, .delete-button {
+  background-color: white;
+  border: none;
+  transition: .3s ease;
+}
+
+.edit-button:hover, .delete-button:hover {
+  transition: .3s ease;
+  color: #a6a6a6;
+}
+
+.edit-button:active, .edit-button:focus, .delete-button:active, .delete-button:focus {
+  outline: none;
+  color: #a6a6a6;
+}
+
+.delete-button {
+  margin-left: 2px;
+}
+
+.edit-input, .delete-input, .delete-label, .add-input {
+  display: inline-block;
+  font-size: .85em;
+}
+
+.en-item-input {
+  width: 35%;
+  margin-right: 2%;
+}
+
+.jp-item-input {
+  width: 33%;
+  margin-right: 2%;
+}
+
+.price-input {
+  width: 16%;
+  margin-right: 2%;
+}
+
+.edit-form-btn, .add-form-btn {
+  width: 10%;
+  font-size: 1em;
+  background-color: green;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.delete-input {
+  width: 15%;
+  font-size: 1em;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 2.5%;
+}
+
+.confirm-delete {
+  background-color: green;
+}
+
+.menu-delete-form {
+  text-align: right;
+}
+
+.menu-add-form {
+  margin-bottom: 16px;
 }
