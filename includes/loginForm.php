@@ -21,32 +21,26 @@
         echo "<p>$mysqli->connect_error<p>";
         die( "Couldn't connect to database");
     }
-    $query = "SELECT * FROM Users WHERE Username = ?";
-    $stmt = $mysqli->prepare($query);
-    $stmt->bind_param("s", $post_username);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    
 
-    if ($result->num_rows > 0) {
+      $result = $mysqli->query("SELECT * FROM Users");
       $row = $result->fetch_assoc();
       $db_hash_password = $row['hashPassword'];
-      if( password_verify( $post_password, $db_hash_password ) ) {
-          $db_username = $row['Username'];
-          $_SESSION['logged_user'] = $db_username;
-          echo '<p class="success-message">You have successfully logged in as '.$db_username.'.</p>';
+      $db_hash_username = $row['hashUsername'];
+      if( password_verify( $post_password, $db_hash_password ) and password_verify( $post_username, $db_hash_username )) {
+          $_SESSION['logged_user'] = $post_username;
+          echo '<p class="success-message">You have successfully logged in as '.$post_username.'.</p>';
           echo '<script>window.location = "./login";</script>';
+          $stmt = $mysqli->prepare($query);
+          $stmt->bind_param("s", $post_username);
+          $stmt->execute();
+          $stmt->close();
+          $mysqli->close();
       }
       else {
           echo '<p class="error-message">Your username and/or password were not correct.
-                  Please try again
+                  Please try again.
                 </p>';
       }
-    } else {
-        echo '<p class="error-message">Your username and/or password were not correct.
-                Please try again
-              </p>';
     }
-    $stmt->close();
-    $mysqli->close();
-  }
 ?>
