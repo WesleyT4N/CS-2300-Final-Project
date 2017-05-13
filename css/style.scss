@@ -431,10 +431,14 @@ input:focus, textarea:focus, input:active, textarea:active {
   color: #a6a6a6;
 }
 
-.edit-button:active, .edit-button:focus, .delete-button:active, .delete-button:focus {
+.edit-button:focus, .delete-button:focus {
   outline: none;
+}
+
+.edit-button:active, .delete-button:active {
   color: #a6a6a6;
 }
+
 .delete-button {
   margin-left: 2px;
 }
@@ -482,7 +486,13 @@ input:focus, textarea:focus, input:active, textarea:active {
 }
 .menu-delete-form {
   text-align: right;
+  padding-bottom: 4px;
+  padding-top: 8px;
 }
 .menu-add-form {
   margin-bottom: 16px;
+}
+
+.form-message {
+  display: none;
 }

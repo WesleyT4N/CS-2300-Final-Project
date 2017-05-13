@@ -10,6 +10,8 @@ function makeMenuEditForm($id, $en, $jp, $price) {
       echo '<input class="edit-input jp-item-input" type="text" name="itemNameJp" autocomplete="off" placeholder="jpn: ('.$jp.')"/>';
       echo '<input class="edit-input price-input" type="text" name="itemPrice" autocomplete="off" placeholder="$: ('.$price.')" />';
       echo '<button class="edit-input btn edit-form-btn" type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>';
+      echo '<p class="form-message success-message"></p>';
+      echo '<p class="form-message error-message"></p>';
   echo '</form>';
 }
 
@@ -19,6 +21,7 @@ function makeMenuDeleteForm($id) {
       echo '<label class="delete-label">Are you sure you want to delete?</label>';
       echo '<button class="delete-input btn delete-form-btn confirm-delete" type="submit">yes</button>';
       echo '<button class="delete-input btn delete-form-btn" type="button">no</button>';
+      echo '<p class="form-message success-message"></p>';
   echo '</form>';
 }
 
@@ -30,6 +33,8 @@ function makeMenuAddForm($typeId) {
       echo '<input class="add-input jp-item-input" type="text" name="addItemNameJp" autocomplete="off" placeholder="jpn. item name"/>';
       echo '<input class="add-input price-input" type="text" name="addItemPrice" autocomplete="off" placeholder="$: " />';
       echo '<button class="add-input btn add-form-btn" type="addSubmit"><i class="fa fa-plus" aria-hidden="true"></i></button>';
+      echo '<p class="form-message success-message"></p>';
+      echo '<p class="form-message error-message"></p>';
   echo '</form>';
 }
 ?>

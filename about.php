@@ -30,13 +30,13 @@
           <div class="hours-container">
             <h1 id="hoursHeader">our hours</h1>
             <hr />
-            <p class="date">Sunday	<span class="time">10AM – 12AM</span></p>
-            <p class="date">Monday	<span class="time">10AM – 12AM</span></p>
-            <p class="date">Wednesday	<span class="time">10AM – 12AM</span></p>
-            <p class="date">Thursday	<span class="time">10AM – 12AM</span></p>
-            <p class="date">Friday	<span class="time">10AM – 1AM</span></p>
-            <p class="date">Saturday	<span class="time">10AM – 1AM</span></p>
-            <p class="date">Tuesday	<span class="time">10AM – 12AM</span></p>
+            <p class="date" ><span id="sun">Sunday</span><span class="time">10AM – 12AM</span></p>
+            <p class="date"><span id="mon">Monday</span><span class="time">10AM – 12AM</span></p>
+            <p class="date"><span id="tue">Tuesday</span><span class="time">10AM – 12AM</span></p>
+            <p class="date"><span id="wed">Wednesday</span><span class="time">10AM – 12AM</span></p>
+            <p class="date"><span id="thur">Thursday</span><span class="time">10AM – 12AM</span></p>
+            <p class="date"><span id="fri">Friday</span><span class="time">10AM – 1AM</span></p>
+            <p class="date"><span id="sat">Saturday</span><span class="time">10AM – 1AM</span></p>
           </div>
           <div class="transit-container">
             <h1 id="transitHeader">public transit</h1>
