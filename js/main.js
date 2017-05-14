@@ -32,13 +32,13 @@ $(document).ready(function() {
     whereToFindUs: "", //japanese translation of "location"
     hoursHeader: "", // japanese translation of "hours" header
     days: {
-      sun: "",
-      mon: "",
-      tue: "",
-      wed: "",
-      thur: "",
-      fri: "",
-      sat: ""
+      sun: " ",
+      mon: " ",
+      tue: " ",
+      wed: " ",
+      thur: " ",
+      fri: " ",
+      sat: " "
     },
     publicTransit: "" // japanese translation of public transit
   }
@@ -77,7 +77,7 @@ $(document).ready(function() {
       $('.page-header-title').slideUp(200, function() {
         $('.page-header-title').text(welcomeTranslations['header']);
       }).slideDown(200);
-      $(".welcome-text").slideUp(200, function(){
+      $(".welcome-text").slideUp(200, function() {
         $('.welcome-text').text(welcomeTranslations['welcomeMessage']);
       }).slideDown(200);
     } else {
@@ -95,7 +95,8 @@ $(document).ready(function() {
     var prevHeader = infoTranslations['eng']['header'];
     var prevWhereToFind = infoTranslations['eng']['whereToFindUs'];
     var prevHoursHeader = infoTranslations['eng']['hoursHeader'];
-
+    var prevDays = infoTranslations['eng']['days'];
+    var prevTransit = infoTranslations['eng']['publicTransit'];
     if ($('.page-header-title').text() === prevHeader) {
       $('.page-header-title').slideUp(200, function() {
         $('.page-header-title').text(infoTranslations['header']);
@@ -110,21 +111,36 @@ $(document).ready(function() {
         $('#transitHeader').text(infoTranslations['publicTransit']);
       }).slideDown(200);
       var days = infoTranslations['days'];
-      for (var day in days) {
-        if (days.hasOwnProperty(day)) {
-          console.log(day + " -> " + days[day]);
-          $('#'+day).text(days[day]);
-          // $('#'+day).slideUp(200, function() {
-          //   console.log(day);
-          // }).slideDown(200);
-        }
-      }
+      $.each(days, function(day, days) {
+        console.log(day);
+        $('#'+day).slideUp(200, function() {
+          $('#'+day).text(infoTranslations['days'][day]);
+        }).slideDown(200);
+      });
+
     } else {
       $('.page-header-title').slideUp(200, function() {
         $('.page-header-title').text(prevHeader);
       }).slideDown(200);
-
+      $('#locationHeader').slideUp(200, function(){
+        $('#locationHeader').text(prevWhereToFind);
+      }).slideDown(200);
+      $('#hoursHeader').slideUp(200, function(){
+        $('#hoursHeader').text(prevHoursHeader);
+      }).slideDown(200);
+      for (var day in days) {
+        if (days.hasOwnProperty(day)) {
+          console.log(day + " -> " + days[day]);
+          $('#'+day).slideUp(200, function() {
+            $('#'+day).text(prevDays[day]);
+          }).slideDown(200);
+        }
+      }
+      $('#transitHeader').slideUp(200, function(){
+        $('#transitHeader').text(prevTransit);
+      }).slideDown(200);
     }
+
     // Replace content text with japanese text
   });
 
