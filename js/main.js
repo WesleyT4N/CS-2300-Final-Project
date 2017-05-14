@@ -8,7 +8,7 @@ $(document).ready(function() {
       header: $('.page-header-title').text(),
       welcomeMessage: $('.welcome-text').text()
     },
-    header: "", //put japanese translation of header here as a string
+    header: "いらっしゃいませ", //put japanese translation of header here as a string
     welcomeMessage: "カレッジタウンのカフェパシフィックで、美味しい家庭料理が食べられます。色々なデザートやお菓子もありますから、ぜひ来てください！"
   }
 
@@ -28,35 +28,35 @@ $(document).ready(function() {
         sat: $('#sat').text()
       }
     },
-    header: "", //put japanese translation of "info" header here as a string
-    whereToFindUs: "", //japanese translation of "location"
-    hoursHeader: "", // japanese translation of "hours" header
+    header: "アクセス", //put japanese translation of "info" header here as a string
+    whereToFindUs: "アドレス", //japanese translation of "location"
+    hoursHeader: "営業時間", // japanese translation of "hours" header
     days: {
-      sun: "",
-      mon: "",
-      tue: "",
-      wed: "",
-      thur: "",
-      fri: "",
-      sat: ""
+      sun: "日曜日",
+      mon: "月曜日",
+      tue: "火曜日",
+      wed: "水曜日",
+      thur: "木曜日",
+      fri: "金曜日",
+      sat: "土曜日"
     },
-    publicTransit: "" // japanese translation of public transit
+    publicTransit: "バス" // japanese translation of public transit
   }
 
   var contactTranslations = {
-    header: "", // japanese translation of contact
-    phoneTakeout: "", // japanese translation of "phone number (takeout)"
-    leaveAComment: "", // japanese translation of instruction
-    name: "", // japanese translation of name
-    comment: "", // japanese translation of comment
-    msgPlaceholder: "", //japanese translation of (comments, suggestions, etc)
-    send: "" // japanese translation of send
+    header: "連絡", // japanese translation of contact
+    phoneTakeout: "電話番号（テークアウト）", // japanese translation of "phone number (takeout)"
+    leaveAComment: "コメントフォーム", // japanese translation of instruction
+    name: "名前", // japanese translation of name
+    comment: "コメント", // japanese translation of comment
+    msgPlaceholder: "（メッセージ）", //japanese translation of (comments, suggestions, etc)
+    send: "送ります" // japanese translation of send
   }
 
   var loginTranslations = {
-    header: "", // japanese translation of login
-    username: "", // japanese translation of username
-    password: "" // japanese translation of password
+    header: "ログイン", // japanese translation of login
+    username: "ユーザー名", // japanese translation of username
+    password: "パスワード" // japanese translation of password
   }
 
 
