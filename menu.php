@@ -17,9 +17,11 @@ $ids = array();
         <h1 class="page-header-title ">menu</h1>
       </div>
       <div class="col-sm-6 translate-container">
-        <button class="btn translate-button" id="menuTranslateBtn" type="button">
-          ENG <i class="fa fa-arrows-h" aria-hidden="true"></i> 日本語
-        </button>
+        <form method="get">
+          <button class="btn translate-button" id="menuTranslateBtn" name="lang" type="button">
+            ENG <i class="fa fa-arrows-h" aria-hidden="true"></i> 日本語
+          </button>
+        </form>
       </div>
     </div>
   </div>

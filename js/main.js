@@ -44,6 +44,7 @@ $(document).ready(function() {
   }
 
   var contactTranslations = {
+
     header: "連絡", // japanese translation of contact
     phoneTakeout: "電話番号（テークアウト）", // japanese translation of "phone number (takeout)"
     leaveAComment: "コメントフォーム", // japanese translation of instruction
@@ -128,14 +129,12 @@ $(document).ready(function() {
       $('#hoursHeader').slideUp(200, function(){
         $('#hoursHeader').text(prevHoursHeader);
       }).slideDown(200);
-      for (var day in days) {
-        if (days.hasOwnProperty(day)) {
-          console.log(day + " -> " + days[day]);
-          $('#'+day).slideUp(200, function() {
-            $('#'+day).text(prevDays[day]);
-          }).slideDown(200);
-        }
-      }
+      var days = infoTranslations['days'];
+      $.each(days, function(day, days) {
+        $('#'+day).slideUp(200, function() {
+          $('#'+day).text(infoTranslations['eng']['days'][day]);
+        }).slideDown(200);
+      });
       $('#transitHeader').slideUp(200, function(){
         $('#transitHeader').text(prevTransit);
       }).slideDown(200);

@@ -22,7 +22,7 @@
             <i class="fa fa-phone" aria-hidden="true"></i> (607)-277-7700
         </p>
         <hr />
-        
+
         <form action="contact.php" id="contactForm" method="post" onsubmit="return validateForm(this);">
             <h2 id="commentHeader">leave a comment</h2>
             <hr />
@@ -38,16 +38,16 @@
                 <button class="btn" type="submit" id="submit" name="submit" class="submit">send</button><div class="error"></div>
             </div>
         </form>
-        
+
       <?php
-        
+
         if (isset($_POST['name'])) {
 	       $name = $_POST['name'];
         }
         else {
             $name = "";
         }
-        
+
         if (isset($_POST['comment'])) {
 	       $comment = $_POST['comment'];
         }
@@ -58,14 +58,16 @@
         if (isset($_POST['submit'])) {
             $subject = "New comment from $name.";
             mail('jachen1997@yahoo.com', $subject, $comment);
-            echo "Thank you for your feedback!";
-        }           
-           
+            echo "<p class='success-message'>
+              Thank you for your feedback!
+            </p>";
+        }
+
       // PSEUDOCODE:
       // If the button is pressed:
 
         // Sanitize name and comment inputs. If any of the fields are empty raise an error
-        
+
 
         // Use mail() function to send to designated email ex: mail("placeholder@gmail.com", "subject", comment, headers)
       ?>
