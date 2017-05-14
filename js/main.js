@@ -44,7 +44,16 @@ $(document).ready(function() {
   }
 
   var contactTranslations = {
-
+    eng: {
+      header: $('.page-header-title').text(),
+      phoneTakeout: $('#phoneTakeout').text(),
+      leaveAComment: $('#commentHeader').text(),
+      name: $('#nameLabel').text(),
+      namePlaceholder: $('#name').attr('placeholder'),
+      comment: $('#commentLabel').text(),
+      msgPlaceholder: $('#comment').attr('placeholder'),
+      send: $('#submit').text()
+    },
     header: "連絡", // japanese translation of contact
     phoneTakeout: "電話番号（テークアウト）", // japanese translation of "phone number (takeout)"
     leaveAComment: "コメントフォーム", // japanese translation of instruction
@@ -55,6 +64,13 @@ $(document).ready(function() {
   }
 
   var loginTranslations = {
+    eng: {
+      header: $('.page-header-title').text(),
+      username: $('#usernameLabel').text(),
+      usernamePlaceholder: $('#username').attr('placeholder'),
+      password: $('#passwordLabel').text(),
+      passwordPlaceHolder: $('#username').attr('placeholder')
+    },
     header: "ログイン", // japanese translation of login
     username: "ユーザー名", // japanese translation of username
     password: "パスワード" // japanese translation of password

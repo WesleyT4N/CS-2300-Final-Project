@@ -27,11 +27,11 @@
             <h2 id="commentHeader">leave a comment</h2>
             <hr />
             <div class="form-group">
-                <label>name</label>
+                <label id="nameLabel">name</label>
                 <input id="name" autocomplete="off" type="text" name="name" placeholder="Commenter Name" /><div class="error"></div>
             </div>
             <div class="form-group">
-                <label>comment</label>
+                <label id="commentLabel">comment</label>
                 <textarea id="comment" autocomplete="off" type="textarea" name="comment" placeholder="(comments, suggestions, etc.)" rows="4"></textarea><div class="error"></div>
             </div>
             <div class="form-group submit-container">

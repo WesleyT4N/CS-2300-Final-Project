@@ -1,11 +1,11 @@
 <form id="loginForm" method="post">
   <div class="form-group">
-    <label>username</label>
-    <input class="login-input" type="text" name="username" placeholder="username" autocomplete="off"/>
+    <label id="usernameLabel">username</label>
+    <input id="username" class="login-input" type="text" name="username" placeholder="username" autocomplete="off"/>
   </div>
   <div class="form-group">
-    <label>password</label>
-    <input class="login-input" type="password" name="password" placeholder="password" />
+    <label id="passwordLabel">password</label>
+    <input id="passsword" class="login-input" type="password" name="password" placeholder="password" />
   </div>
   <div class="form-group submit-container">
     <button class="btn" type="submit" id="loginSubmit">login</button>
@@ -21,7 +21,7 @@
         echo "<p>$mysqli->connect_error<p>";
         die( "Couldn't connect to database");
     }
-    
+
 
       $result = $mysqli->query("SELECT * FROM Users");
       $row = $result->fetch_assoc();
