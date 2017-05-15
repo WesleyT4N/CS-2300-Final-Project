@@ -16,7 +16,7 @@ function makeMenuEditForm($id, $en, $jp, $price) {
 }
 
 function makeMenuDeleteForm($id) {
-  echo '<form action="./deleteEntry.php" method="psot" class="menu-delete-form">';
+  echo '<form action="./deleteEntry.php" method="post" class="menu-delete-form">';
       echo '<input type="hidden" value="'.$id.'" name="delete-row-id">';
       echo '<label class="delete-label">Are you sure you want to delete?</label>';
       echo '<button class="delete-input btn delete-form-btn confirm-delete" type="submit">yes</button>';
