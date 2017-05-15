@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="contact-content">
-        <p id="phoneNumber">phone (take-out)<br />
+        <p id="phoneNumber"><span id="phoneTakeout">phone (take-out)</span><br />
             <i class="fa fa-phone" aria-hidden="true"></i> (607)-277-7700
         </p>
         <hr />

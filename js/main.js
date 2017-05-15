@@ -2,6 +2,7 @@ $(document).ready(function() {
   $('.menu-edit-form').hide();
   $('.menu-delete-form').hide();
   $(".form-message").hide();
+
   if (window.location.href.includes("lang=jp")) {
     $('.page-header-title').text("メニュー");
   }
@@ -72,11 +73,14 @@ $(document).ready(function() {
       username: $('#usernameLabel').text(),
       usernamePlaceholder: $('#username').attr('placeholder'),
       password: $('#passwordLabel').text(),
-      passwordPlaceHolder: $('#username').attr('placeholder')
+      passwordPlaceHolder: $('#password').attr('placeholder'),
+      login: $('#loginSubmit').text(),
+      logout: $('#logoutBtn').text()
     },
     header: "ログイン", // japanese translation of login
     username: "ユーザー名", // japanese translation of username
-    password: "パスワード" // japanese translation of password
+    password: "パスワード" ,
+    logout: "ログアウト"// japanese translation of password
   }
 
 
@@ -111,12 +115,12 @@ $(document).ready(function() {
   });
 
   $('#aboutTranslateBtn').click(function() {
-    // Replace page-header-title with japanese text
     var prevHeader = infoTranslations['eng']['header'];
     var prevWhereToFind = infoTranslations['eng']['whereToFindUs'];
     var prevHoursHeader = infoTranslations['eng']['hoursHeader'];
     var prevDays = infoTranslations['eng']['days'];
     var prevTransit = infoTranslations['eng']['publicTransit'];
+
     if ($('.page-header-title').text() === prevHeader) {
       $('.page-header-title').slideUp(200, function() {
         $('.page-header-title').text(infoTranslations['header']);
@@ -158,28 +162,125 @@ $(document).ready(function() {
         $('#transitHeader').text(prevTransit);
       }).slideDown(200);
     }
-
-    // Replace content text with japanese text
   });
 
   $('#contactTranslateBtn').click(function() {
-    // Replace page-header-title with japanese text
+    var prevHeader = contactTranslations['eng']['header'];
+    var prevPhoneTakeout = contactTranslations['eng']['phoneTakeout'];
+    var prevCommentHeader = contactTranslations['eng']['leaveAComment'];
+    var prevNameLabel = contactTranslations['eng']['name'];
+    var prevNamePlaceholder = contactTranslations['eng']['namePlaceholder'];
+    var prevCommentLabel = contactTranslations['eng']['comment'];
+    var prevMsgPlaceholder = contactTranslations['eng']['msgPlaceholder'];
+    var prevSend = contactTranslations['eng']['send'];
 
-    // Replace phone label with japanese text
-
-    // Replace form header with japanese text
-
-    // Replace form label text and input placeholders with japanese text
-
-    // Replace send button text with japanese translation
+    if ($('.page-header-title').text() === prevHeader) {
+      $('.page-header-title').slideUp(200, function() {
+        $('.page-header-title').text(contactTranslations['header']);
+      }).slideDown(200);
+      $('#phoneTakeout').slideUp(200, function() {
+        $('#phoneTakeout').text(contactTranslations['phoneTakeout']);
+      }).slideDown(200);
+      $('#commentHeader').slideUp(200, function() {
+        $('#commentHeader').text(contactTranslations['leaveAComment']);
+      }).slideDown(200);
+      $('#nameLabel').slideUp(200, function() {
+        $('#nameLabel').text(contactTranslations['name']);
+      }).slideDown(200);
+      $('#name').slideUp(200, function() {
+        $('#name').attr('placeholder', contactTranslations['name']);
+      }).slideDown(200);
+      $('#commentLabel').slideUp(200, function() {
+        $('#commentLabel').text(contactTranslations['comment']);
+      }).slideDown(200);
+      $('#comment').slideUp(200, function() {
+        $('#comment').attr('placeholder', contactTranslations['msgPlaceholder']);
+      }).slideDown(200);
+      $('#contactForm').slideUp(200, function() {
+        $('#submit').text(contactTranslations['send']);
+      }).slideDown(200);
+    } else {
+      $('.page-header-title').slideUp(200, function() {
+        $('.page-header-title').text(prevHeader);
+      }).slideDown(200);
+      $('#phoneTakeout').slideUp(200, function() {
+        $('#phoneTakeout').text(prevPhoneTakeout);
+      }).slideDown(200);
+      $('#commentHeader').slideUp(200, function() {
+        $('#commentHeader').text(prevCommentHeader);
+      }).slideDown(200);
+      $('#nameLabel').slideUp(200, function() {
+        $('#nameLabel').text(prevNameLabel);
+      }).slideDown(200);
+      $('#name').slideUp(200, function() {
+        $('#name').attr('placeholder', prevNamePlaceholder);
+      }).slideDown(200);
+      $('#commentLabel').slideUp(200, function() {
+        $('#commentLabel').text(prevCommentLabel);
+      }).slideDown(200);
+      $('#comment').slideUp(200, function() {
+        $('#comment').attr('placeholder', prevMsgPlaceholder);
+      }).slideDown(200);
+      $('#contactForm').slideUp(200, function() {
+        $('#submit').text(prevSend);
+      }).slideDown(200);
+    }
   });
 
   $('#loginTranslateBtn').click(function() {
-    // Replace page-header-title with japanese text
+    var prevHeader = loginTranslations['eng']['header'];
+    var prevUsernameLabel = loginTranslations['eng']['username'];
+    var prevUsernamePlaceholder = loginTranslations['eng']['usernamePlaceholder'];
+    var prevPasswordLabel = loginTranslations['eng']['password'];
+    var prevPasswordPlaceholder = loginTranslations['eng']['passwordPlaceHolder'];
+    var prevLogin = loginTranslations['eng']['login'];
+    var prevLogout = loginTranslations['eng']['logout'];
 
-    // Replace login form labels and placeholders
-
-    // Replace login button text
+    if ($('.page-header-title').text() === prevHeader) {
+      $('.page-header-title').slideUp(200, function() {
+        $('.page-header-title').text(loginTranslations['header']);
+      }).slideDown(200);
+      $('#usernameLabel').slideUp(200, function() {
+        $('#usernameLabel').text(loginTranslations['username']);
+      }).slideDown(200);
+      $('#username').slideUp(200, function() {
+        $('#username').attr('placeholder', loginTranslations['username']);
+      }).slideDown(200);
+      $('#passwordLabel').slideUp(200, function() {
+        $('#passwordLabel').text(loginTranslations['password']);
+      }).slideDown(200);
+      $('#password').slideUp(200, function() {
+        $('#password').attr('placeholder', loginTranslations['password']);
+      }).slideDown(200);
+      $('#loginForm').slideUp(200, function() {
+        $('#loginSubmit').text(loginTranslations['header']);
+      }).slideDown(200);
+      $('#logoutForm').slideUp(200, function() {
+        $('#logoutBtn').text(loginTranslations['logout']);
+      }).slideDown(200);
+    } else {
+      $('.page-header-title').slideUp(200, function() {
+        $('.page-header-title').text(prevHeader);
+      }).slideDown(200);
+      $('#usernameLabel').slideUp(200, function() {
+        $('#usernameLabel').text(prevUsernameLabel);
+      }).slideDown(200);
+      $('#username').slideUp(200, function() {
+        $('#username').attr('placeholder', prevUsernamePlaceholder);
+      }).slideDown(200);
+      $('#passwordLabel').slideUp(200, function() {
+        $('#passwordLabel').text(prevPasswordLabel);
+      }).slideDown(200);
+      $('#password').slideUp(200, function() {
+        $('#password').attr('placeholder', prevPasswordPlaceholder);
+      }).slideDown(200);
+      $('#loginForm').slideUp(200, function() {
+        $('#loginSubmit').text(prevLogin);
+      }).slideDown(200);
+      $('#logoutForm').slideUp(200, function() {
+        $('#logoutBtn').text(prevLogout);
+      }).slideDown(200);
+    }
   });
 
   $('.edit-button').click(function() {
@@ -201,4 +302,5 @@ $(document).ready(function() {
       window.location = './menu?lang=jp';
     }
   });
+
 });

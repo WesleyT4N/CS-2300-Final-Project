@@ -5,7 +5,7 @@
   </div>
   <div class="form-group">
     <label id="passwordLabel">password</label>
-    <input id="passsword" class="login-input" type="password" name="password" placeholder="password" />
+    <input id="password" class="login-input" type="password" name="password" placeholder="password" />
   </div>
   <div class="form-group submit-container">
     <button class="btn" type="submit" id="loginSubmit">login</button>

@@ -8,7 +8,7 @@ if ($mysqli->connect_errno) {
   echo "Errno: " . $mysqli->connect_errno . "\n";
   echo "Error: " . $mysqli->connect_error . "\n";
 }
-$ids = array();
+mysqli_set_charset($mysqli,"utf8");
 ?>
 <div class="main-container">
   <div class="container-fluid">
@@ -72,12 +72,6 @@ $ids = array();
                   echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
                 }
               }
-
-
-              // if you want to use these later on
-              //echo "<p>$pic</p>";
-              //echo "<p>$credit</p>";
-              //echo "<p>$jp</p>";
             }
             if (isset($_SESSION['logged_user'])) {
               makeMenuAddForm(8);
@@ -121,12 +115,6 @@ $ids = array();
                   echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
                 }
               }
-
-
-              // if you want to use these later on
-              //echo "<p>$pic</p>";
-              //echo "<p>$credit</p>";
-              //echo "<p>$jp</p>";
             }
             if (isset($_SESSION['logged_user'])) {
               makeMenuAddForm(3);
@@ -170,12 +158,6 @@ $ids = array();
                   echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
                 }
               }
-
-
-              // if you want to use these later on
-              //echo "<p>$pic</p>";
-              //echo "<p>$credit</p>";
-              //echo "<p>$jp</p>";
             }
             if (isset($_SESSION['logged_user'])) {
               makeMenuAddForm(4);
@@ -219,12 +201,6 @@ $ids = array();
                   echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
                 }
               }
-
-
-              // if you want to use these later on
-              //echo "<p>$pic</p>";
-              //echo "<p>$credit</p>";
-              //echo "<p>$jp</p>";
             }
             if (isset($_SESSION['logged_user'])) {
               makeMenuAddForm(2);
@@ -269,12 +245,6 @@ $ids = array();
                   echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
                 }
               }
-
-
-              // if you want to use these later on
-              //echo "<p>$pic</p>";
-              //echo "<p>$credit</p>";
-              //echo "<p>$jp</p>";
             }
             if (isset($_SESSION['logged_user'])) {
               makeMenuAddForm(6);
@@ -321,12 +291,6 @@ $ids = array();
                   echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
                 }
               }
-
-
-              // if you want to use these later on
-              //echo "<p>$pic</p>";
-              //echo "<p>$credit</p>";
-              //echo "<p>$jp</p>";
             }
             if (isset($_SESSION['logged_user'])) {
               makeMenuAddForm(7);
@@ -371,12 +335,6 @@ $ids = array();
                   echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
                 }
               }
-
-
-              // if you want to use these later on
-              //echo "<p>$pic</p>";
-              //echo "<p>$credit</p>";
-              //echo "<p>$jp</p>";
             }
             if (isset($_SESSION['logged_user'])) {
               makeMenuAddForm(1);
@@ -421,12 +379,6 @@ $ids = array();
                   echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
                 }
               }
-
-
-              // if you want to use these later on
-              //echo "<p>$pic</p>";
-              //echo "<p>$credit</p>";
-              //echo "<p>$jp</p>";
             }
             if (isset($_SESSION['logged_user'])) {
               makeMenuAddForm(5);
