@@ -197,4 +197,11 @@ $(document).ready(function() {
     });
   });
 
+  $('#menuTranslateBtn').click(function() {
+    if (window.location.href.includes("lang=jp")) {
+      window.location = './menu?lang=en';
+    } else {
+      window.location = './menu?lang=jp';
+    }
+  });
 });

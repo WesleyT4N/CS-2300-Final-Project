@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Perform prepared statement database query
 
         // Send the user back to the first page so they don't have that annoying pop-up if they hit the refresh button after deleting something.
-        header('Location: ../menu');
+        header('Location: ./menu');
 
     }
 }

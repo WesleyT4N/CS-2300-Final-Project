@@ -17,35 +17,22 @@ $ids = array();
         <h1 class="page-header-title ">menu</h1>
       </div>
       <div class="col-sm-6 translate-container">
-        <form method="post">
-          <button class="btn translate-button" id="menuTranslateBtn" name="lang" type="submit">
+        <form method="post" id="translateMenu">
+          <button class="btn translate-button" id="menuTranslateBtn" name="lang" type="button">
             ENG <i class="fa fa-arrows-h" aria-hidden="true"></i> 日本語
           </button>
         </form>
       </div>
     </div>
   </div>
-    <?php
-    
-    if (isset($_GET['lang'])) {
-	   $lang = $_GET['lang'];
-    }
-        else {
-        $lang = "";
-    }
-    
-    if (empty($lang) || $lang == "en") {
-        if (isset($_POST['lang'])) {
-            header("Location: https://info2300.coecis.cornell.edu/users/fp_supercool/www/Final%20Project/menu?lang=jp");
-        }
-    }
-    else if ($lang == "jp") {
-        if (isset($_POST['lang'])) {
-            echo "button pressed";
-            header("Location: https://info2300.coecis.cornell.edu/users/fp_supercool/www/Final%20Project/menu?lang=en");
-        }
-    }
-    ?>
+  <?php
+  if (isset($_GET['lang'])) {
+    $lang = $_GET['lang'];
+  }
+  else {
+    $lang = "";
+  }
+  ?>
   <div class="menu-container">
     <div class="row">
       <div class="col-md-6">
@@ -63,27 +50,27 @@ $ids = array();
               $price = $row[ 'price' ];
 
               if (isset($_SESSION['logged_user'])) {
-                  if ($lang == "jp") {
-                      echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$jp</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                  else {
-                       echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$en</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                 makeMenuEditForm($id, $en, $jp, $price);
-                 makeMenuDeleteForm($id);
+                if ($lang == "jp") {
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$jp</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                else {
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$en</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                makeMenuEditForm($id, $en, $jp, $price);
+                makeMenuDeleteForm($id);
               } else {
-                  if ($lang == "jp") {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
-                  }
-                  else {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
-                  }
+                if ($lang == "jp") {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
+                }
+                else {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
+                }
               }
 
 
@@ -113,26 +100,26 @@ $ids = array();
 
               if (isset($_SESSION['logged_user'])) {
                 if ($lang == "jp") {
-                      echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$jp</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                  else {
-                       echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$en</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                 makeMenuEditForm($id, $en, $jp, $price);
-                 makeMenuDeleteForm($id);
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$jp</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                else {
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$en</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                makeMenuEditForm($id, $en, $jp, $price);
+                makeMenuDeleteForm($id);
               } else {
-                  if ($lang == "jp") {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
-                  }
-                  else {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
-                  }
+                if ($lang == "jp") {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
+                }
+                else {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
+                }
               }
 
 
@@ -162,26 +149,26 @@ $ids = array();
 
               if (isset($_SESSION['logged_user'])) {
                 if ($lang == "jp") {
-                      echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$jp</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                  else {
-                       echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$en</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                 makeMenuEditForm($id, $en, $jp, $price);
-                 makeMenuDeleteForm($id);
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$jp</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                else {
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$en</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                makeMenuEditForm($id, $en, $jp, $price);
+                makeMenuDeleteForm($id);
               } else {
-                  if ($lang == "jp") {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
-                  }
-                  else {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
-                  }
+                if ($lang == "jp") {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
+                }
+                else {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
+                }
               }
 
 
@@ -211,26 +198,26 @@ $ids = array();
 
               if (isset($_SESSION['logged_user'])) {
                 if ($lang == "jp") {
-                      echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$jp</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                  else {
-                       echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$en</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                 makeMenuEditForm($id, $en, $jp, $price);
-                 makeMenuDeleteForm($id);
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$jp</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                else {
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$en</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                makeMenuEditForm($id, $en, $jp, $price);
+                makeMenuDeleteForm($id);
               } else {
-                  if ($lang == "jp") {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
-                  }
-                  else {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
-                  }
+                if ($lang == "jp") {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
+                }
+                else {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
+                }
               }
 
 
@@ -261,26 +248,26 @@ $ids = array();
 
               if (isset($_SESSION['logged_user'])) {
                 if ($lang == "jp") {
-                      echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$jp</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                  else {
-                       echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$en</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                 makeMenuEditForm($id, $en, $jp, $price);
-                 makeMenuDeleteForm($id);
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$jp</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                else {
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$en</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                makeMenuEditForm($id, $en, $jp, $price);
+                makeMenuDeleteForm($id);
               } else {
-                  if ($lang == "jp") {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
-                  }
-                  else {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
-                  }
+                if ($lang == "jp") {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
+                }
+                else {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
+                }
               }
 
 
@@ -313,26 +300,26 @@ $ids = array();
 
               if (isset($_SESSION['logged_user'])) {
                 if ($lang == "jp") {
-                      echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$jp</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                  else {
-                       echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$en</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                 makeMenuEditForm($id, $en, $jp, $price);
-                 makeMenuDeleteForm($id);
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$jp</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                else {
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$en</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                makeMenuEditForm($id, $en, $jp, $price);
+                makeMenuDeleteForm($id);
               } else {
-                  if ($lang == "jp") {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
-                  }
-                  else {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
-                  }
+                if ($lang == "jp") {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
+                }
+                else {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
+                }
               }
 
 
@@ -363,26 +350,26 @@ $ids = array();
 
               if (isset($_SESSION['logged_user'])) {
                 if ($lang == "jp") {
-                      echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$jp</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                  else {
-                       echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$en</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                 makeMenuEditForm($id, $en, $jp, $price);
-                 makeMenuDeleteForm($id);
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$jp</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                else {
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$en</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                makeMenuEditForm($id, $en, $jp, $price);
+                makeMenuDeleteForm($id);
               } else {
-                  if ($lang == "jp") {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
-                  }
-                  else {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
-                  }
+                if ($lang == "jp") {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
+                }
+                else {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
+                }
               }
 
 
@@ -412,27 +399,27 @@ $ids = array();
               $price = $row[ 'price' ];
 
               if (isset($_SESSION['logged_user'])) {
-               if ($lang == "jp") {
-                      echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$jp</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                  else {
-                       echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
-                    <span jpn='$jp' val='$id'>$en</span>
-                    <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
-                    </p>";
-                  }
-                 makeMenuEditForm($id, $en, $jp, $price);
-                 makeMenuDeleteForm($id);
+                if ($lang == "jp") {
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$jp</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                else {
+                  echo "<p><button class='edit-button'><i class='fa fa-pencil' aria-hidden='true'></i></button>
+                  <span jpn='$jp' val='$id'>$en</span>
+                  <span style='float: right;'>$price<button class='delete-button'><i class='fa fa-trash' aria-hidden='true'></i></button></span>
+                  </p>";
+                }
+                makeMenuEditForm($id, $en, $jp, $price);
+                makeMenuDeleteForm($id);
               } else {
-                  if ($lang == "jp") {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
-                  }
-                  else {
-                      echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
-                  }
+                if ($lang == "jp") {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$jp</span><span style='float: right;'>$price</span></p>";
+                }
+                else {
+                  echo "<p><span jpn='$jp' id='item$id' val='$id'>$en</span><span style='float: right;'>$price</span></p>";
+                }
               }
 
 
@@ -442,7 +429,7 @@ $ids = array();
               //echo "<p>$jp</p>";
             }
             if (isset($_SESSION['logged_user'])) {
-               makeMenuAddForm(5);
+              makeMenuAddForm(5);
             }
             ?>
           </div>
