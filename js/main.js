@@ -2,6 +2,9 @@ $(document).ready(function() {
   $('.menu-edit-form').hide();
   $('.menu-delete-form').hide();
   $(".form-message").hide();
+  if (window.location.href.includes("lang=jp")) {
+    $('.page-header-title').text("メニュー");
+  }
 
   var welcomeTranslations = {
     eng: {
@@ -177,12 +180,6 @@ $(document).ready(function() {
     // Replace login form labels and placeholders
 
     // Replace login button text
-  });
-
-  $('#menuTranslateBtn').click(function() {
-    // make ajax call to php script which will hold associative arrays for each menu section
-
-    // clear the item container for each menu item and then reload with japanese text
   });
 
   $('.edit-button').click(function() {

@@ -13,7 +13,6 @@
     crossorigin="anonymous">
   </script>
   <link href="./css/jquery.bxslider.css" rel="stylesheet" />
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script src="./js/jquery.bxslider.js"></script>
   <script src="./js/main.js"></script>
   <link href="./css/bootstrap.min.css" rel="stylesheet" />
@@ -21,9 +20,6 @@
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <?php require_once "./includes/functions.php"; ?>
-  <!-- bxSlider Javascript file -->
-
-  <!-- bxSlider CSS file -->
 </head>
 
 <body>
