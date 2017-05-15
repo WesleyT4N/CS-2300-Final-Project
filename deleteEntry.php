@@ -5,10 +5,10 @@ if( $mysqli->connect_errno ) {
   //  echo "<p>$mysqli->connect_error<p>";
 //    die( "Couldn't connect to database");
 }
-if (isset($_GET['delete-row-id'])) {
+if (isset($_POST['delete-row-id'])) {
         // set $rowToDelete to delete-row-id (make sure to validate just in case by checking that it is a number)
     //    echo "hi";
-        $rowToDelete = filter_input( INPUT_GET, 'delete-row-id', FILTER_SANITIZE_NUMBER_INT);
+        $rowToDelete = filter_input( INPUT_POST, 'delete-row-id', FILTER_SANITIZE_NUMBER_INT);
     //    echo $rowToDelete;
   //      echo $_GET['delete-row-id'];
         $one = $mysqli->query("DELETE FROM Items WHERE itemID = $rowToDelete");
