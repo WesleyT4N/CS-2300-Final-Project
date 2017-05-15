@@ -14,6 +14,7 @@ if (isset($_GET['delete-row-id'])) {
         $one = $mysqli->query("DELETE FROM Items WHERE itemID = $rowToDelete");
         $two = $mysqli->query("DELETE FROM TypeOfItems WHERE itemID = $rowToDelete");
         //Perform prepared statement database query
+
         // Send the user back to the first page so they don't have that annoying pop-up if they hit the refresh button after deleting something.
         header('Location: https://info2300.coecis.cornell.edu/users/fp_supercool/www/Final%20Project/menu');
     }
