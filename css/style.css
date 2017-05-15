@@ -450,6 +450,10 @@ input:focus, textarea:focus, input:active, textarea:active {
   margin-left: 2px;
 }
 
+.menu-edit-form {
+  padding-bottom: 4px;
+}
+
 .edit-input, .delete-input, .delete-label, .add-input {
   display: inline-block;
   font-size: .85em;
@@ -502,8 +506,4 @@ input:focus, textarea:focus, input:active, textarea:active {
 
 .menu-add-form {
   margin-bottom: 16px;
-}
-
-.form-message {
-  display: none;
 }
