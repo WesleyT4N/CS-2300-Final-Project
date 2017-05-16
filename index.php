@@ -26,9 +26,6 @@
         Come to Café Pacific, located in the heart of Collegetown, for a cozy
         home-cooked Japanese meal and hearty dessert, or simply stop by for
         some bubble tea and choose from a variety of Japanese snacks.
-        <!--Japanese:
-          カレッジタウンのカフェパシフィックで、美味しい家庭料理が食べられます。色々なデザートやお菓子もありますから、ぜひ来てください！
-        -->
       </p>
     </div>
   </div>

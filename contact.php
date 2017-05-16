@@ -57,19 +57,13 @@
 
         if (isset($_POST['submit'])) {
             $subject = "New comment from $name.";
+            // Waiting for owner to provide email address
             mail('jachen1997@yahoo.com', $subject, $comment);
             echo "<p class='success-message'>
               Thank you for your feedback!
             </p>";
         }
 
-      // PSEUDOCODE:
-      // If the button is pressed:
-
-        // Sanitize name and comment inputs. If any of the fields are empty raise an error
-
-
-        // Use mail() function to send to designated email ex: mail("placeholder@gmail.com", "subject", comment, headers)
       ?>
     </div>
   </div>

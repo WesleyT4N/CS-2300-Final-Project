@@ -7,9 +7,22 @@ if( $mysqli->connect_errno ) {
 if (isset($_POST['delete-row-id'])) {
 
         $rowToDelete = filter_input( INPUT_POST, 'delete-row-id', FILTER_SANITIZE_NUMBER_INT);
-        $one = $mysqli->query("DELETE FROM Items WHERE itemID = $rowToDelete");
-        $two = $mysqli->query("DELETE FROM TypeOfItems WHERE itemID = $rowToDelete");
+        $one = "DELETE FROM Items WHERE itemID = ?";
+        $two = "DELETE FROM TypeOfItems WHERE itemID = ?";
 
+        $deleteFromItems = $mysqli->stmt_init();
+        if ($deleteFromItems->prepare($one)) {
+          $deleteFromItems->bind_param("i", $rowToDelete);
+          $deleteFromItems->execute();
+          $deleteFromItems->close();
+        }
+
+        $deleteFromTypeOfItems = $mysqli->stmt_init();
+        if ($deleteFromTypeOfItems->prepare($two)) {
+          $deleteFromTypeOfItems->bind_param("i", $rowToDelete);
+          $deleteFromTypeOfItems->execute();
+          $deleteFromTypeOfItems->close();
+        }
         header('Location: ./menu');
         exit();
     }

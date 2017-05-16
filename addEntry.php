@@ -11,16 +11,34 @@ if (isset($_POST['item-type-id'])) {
     $english = filter_input( INPUT_POST, 'addItemNameEn', FILTER_SANITIZE_STRING);
     $japanese = filter_input( INPUT_POST, 'addItemNameJp', FILTER_SANITIZE_STRING);
     $price = filter_input( INPUT_POST, 'addItemPrice', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
-    $one = $mysqli->query("INSERT INTO Items (en, jp, price) VALUES ('$english', '$japanese', '$price')");
-    $two = $mysqli->query("SELECT itemID FROM Items WHERE en = '$english' AND jp = '$japanese' AND price = '$price'");
-    $row = $two->fetch_row();
-    $max = $row[0];
 
+    $addToItemQuery = "INSERT INTO Items (en, jp, price) VALUES (?, ?, ?)";
+    $addToItems = $mysqli->stmt_init();
+    if ($addToItems->prepare($addToItemQuery)) {
+      $addToItems->bind_param("ssd", $english, $japanese, $price);
+      $addToItems->execute();
+    }
 
-    $three = $mysqli->query("INSERT INTO TypeOfItems (itemID, typeID) VALUES ('$max', '$rowToAdd')");
-        // Perform prepared statement database query
+    $fetchItemIDQuery = "SELECT itemID FROM Items WHERE en = ? AND jp = ? AND price = ?";
+    $fetchItem = $mysqli->stmt_init();
+    if ($fetchItem->prepare($fetchItemIDQuery)) {
+      $fetchItem->bind_param("ssd", $english, $japanese, $price);
+      $fetchItem->execute();
+      $result = $fetchItem->get_result();
+    }
+    $row = $result->fetch_row();
+    $id = $row[0];
 
-        // Send the user back to the first page so they don't have that annoying pop-up if they hit the refresh button after deleting something.
+    $setItemTypeQuery = "INSERT INTO TypeOfItems (itemID, typeID) VALUES (?, ?)";
+    $setItemType = $mysqli->stmt_init();
+    if ($setItemType->prepare($setItemTypeQuery)) {
+      $setItemType->bind_param("ii", $id, $rowToAdd);
+      $setItemType->execute();
+    }
+
+    $addToItems->close();
+    $fetchItem->close();
+    $setItemType->close();
     header('Location: ./menu');
     exit();
 }

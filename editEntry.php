@@ -9,8 +9,16 @@ if (isset($_POST['edit-row-id'])) {
     $english = filter_input( INPUT_POST, 'itemNameEn', FILTER_SANITIZE_STRING);
     $japanese = filter_input( INPUT_POST, 'itemNameJp', FILTER_SANITIZE_STRING);
     $price = filter_input( INPUT_POST, 'itemPrice', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
-    $blank = $mysqli->query("SELECT * FROM Items WHERE itemID = $rowToEdit");
-    $row = $blank->fetch_assoc();
+
+    $findItemQuery = "SELECT * FROM Items WHERE itemID = ?";
+
+    $getCurrentItem = $mysqli->stmt_init();
+    if ($getCurrentItem->prepare($findItemQuery)) {
+      $getCurrentItem->bind_param("i", $rowToEdit);
+      $getCurrentItem->execute();
+      $result = $getCurrentItem->get_result();
+    }
+    $row = $result->fetch_assoc();
     $en = $row['en'];
     $jp = $row['jp'];
     $pr = $row['price'];
@@ -23,8 +31,16 @@ if (isset($_POST['edit-row-id'])) {
     if ($price == "") {
         $price = $pr;
     }
-    $one = $mysqli->query("UPDATE Items SET en = '$english', jp = '$japanese', price = '$price' WHERE itemID = $rowToEdit");
 
+    $updateQuery = "UPDATE Items SET en = ?, jp = ?, price = ? WHERE itemID = ?";
+    $editItem = $mysqli->stmt_init();
+    if ($editItem->prepare($updateQuery)) {
+      $editItem->bind_param("ssdi", $english , $japanese, $price, $rowToEdit);
+      $editItem->execute();
+    }
+
+    $getCurrentItem->close();
+    $editItem->close();
     header('Location: ./menu');
     exit();
 }

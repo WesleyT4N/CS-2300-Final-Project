@@ -25,16 +25,14 @@
 
       $result = $mysqli->query("SELECT * FROM Users");
       $row = $result->fetch_assoc();
+      // No need for prepared statemnts since users only has one user and sql query doesn't take in username
       $db_hash_password = $row['hashPassword'];
       $db_hash_username = $row['hashUsername'];
       if( password_verify( $post_password, $db_hash_password ) and password_verify( $post_username, $db_hash_username )) {
           $_SESSION['logged_user'] = $post_username;
           echo '<p class="success-message">You have successfully logged in as '.$post_username.'.</p>';
           echo '<script>window.location = "./login";</script>';
-          $stmt = $mysqli->prepare($query);
-          $stmt->bind_param("s", $post_username);
-          $stmt->execute();
-          $stmt->close();
+
           $mysqli->close();
       }
       else {
