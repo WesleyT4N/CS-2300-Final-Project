@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <script src="js/validate.js"></script>
-    </head>
+
 <?php include('./includes/header.php'); ?>
 
 <div class="main-container">
@@ -69,4 +65,3 @@
   </div>
 </div>
 <?php include('./includes/footer.php'); ?>
-</html>

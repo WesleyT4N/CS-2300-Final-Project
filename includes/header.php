@@ -15,6 +15,7 @@
   <link href="./css/jquery.bxslider.css" rel="stylesheet" />
   <script src="./js/jquery.bxslider.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/validate.js"></script>
   <link href="./css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://use.fontawesome.com/104d9a8f78.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
